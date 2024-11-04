@@ -3,8 +3,7 @@ This is a simple website written in Golang. It uses the net/http package to serv
 
 ## Running the server
 To run the server, execute the following command:
-
-go run main.go
+```go run main.go ```
 The server will start on port 8080. 
 
 You can access it by navigating to http://localhost:8080/courses in your web browser.
