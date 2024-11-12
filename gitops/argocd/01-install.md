@@ -23,3 +23,13 @@ kubectl patch svc argocd-server -n argocd -p '{\"spec\": {\"type\": \"LoadBalanc
 ```bash
 kubectl get svc argocd-server -n argocd
 ```
+
+## Get ArgoCD secret
+```bash
+kubectl get secrets -n argocd
+
+kubectl edit secret argocd-initial-admin-secret
+
+echo <argo-password> | base64 --decode
+
+```
