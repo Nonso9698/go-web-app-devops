@@ -31,6 +31,10 @@ jobs:
 
     - name: Test
       run: go test ./...
+      
+    - name: Tidy Go Modules
+      run: go mod tidy
+
   
   code-quality:
     runs-on: ubuntu-latest
