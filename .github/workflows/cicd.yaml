@@ -21,10 +21,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Set up Go 1.22
+    - name: Set up Go 1.21
       uses: actions/setup-go@v2
       with:
-        go-version: 1.22
+        go-version: 1.21
 
     - name: Build
       run: go build -o go-web-app
@@ -38,6 +38,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    - name: Set up Go 1.20
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.20
 
     - name: Run golangci-lint
       uses: golangci/golangci-lint-action@v6
@@ -79,7 +84,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        token: ${{ secrets.TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Update tag in Helm chart
       run: |
